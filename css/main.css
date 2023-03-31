@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.container {
+  margin: auto;
+  width: 800px;
+  position: relative;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px 0 10px;
+  border: 2px solid #00bcd4;
+  margin-bottom: 5px;
+}
+header .name,
+.header .tries {
+  display: flex;
+  margin-right: 10px;
+  margin-left: 10px;
+  align-items: center;
+}
+#wrong-tries,
+#user-name {
+  padding-left: 2px;
+  color: #ff5722;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 550px;
+  perspective: 800px;
+}
+.cards .icon {
+  position: relative;
+  width: calc(95% / 5);
+  padding: 15px 5px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #00bcd4;
+  font-size: 100px;
+  color: white;
+  background-color: #000000c7;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: 0.9s;
+}
+.cards .icon i {
+  transition: 0.9s;
+  color: #00bcd4;
+  background-color: rgb(131, 126, 126/0.07);
+  position: absolute;
+  backface-visibility: hidden;
+}
+.rotated {
+  transform: rotateY(180deg);
+}
+.cards .icon.disabled {
+  cursor: not-allowed;
+}
+.container .cong {
+  position: absolute;
+  z-index: 2;
+  font-size: 30px;
+  font-weight: 700;
+  color: #8bc34a;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100%;
+  background-color: #00000075;
+  letter-spacing: 1.4px;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: visibility 1s;
+}
+.start-game {
+  position: absolute;
+  z-index: 2;
+  font-size: 30px;
+  border: 2px solid #00bcd4;
+  font-weight: 700;
+  color: #ff9800;
+  text-transform: capitalize;
+  width: 500px;
+  height: 100px;
+  background-color: #000000db;
+  letter-spacing: 1.4px;
+  left: calc(50% - 250px);
+  top: calc(50% - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.start-game span {
+  color: #ff5722;
+  padding: 0 8px;
+  cursor: pointer;
+}
+#start-again{
+  color: #ff5722;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
